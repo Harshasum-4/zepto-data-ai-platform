@@ -36,6 +36,10 @@ Each book references exactly one category through `category_id`, preventing repe
 
 ## Query and pandas validation
 
+## Generated artifacts
+
+After running `python run_pipeline.py`, the `output/` folder contains `books.db`, `cleaned_books.csv`, and `sql_query_results.md`.
+
 The generated `output/sql_query_results.md` records six executed SQL queries and their outputs. Together they demonstrate `SELECT/WHERE`, `ORDER BY`, `LIMIT`, `DISTINCT`, `BETWEEN`, `IN`, and a category/books `JOIN`.
 
 All queries are read into pandas using `pd.read_sql`. The JOIN output is also reproduced using `pd.merge` on in-memory `books` and `categories` DataFrames; the script records whether both results are equivalent.
